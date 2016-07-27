@@ -32,11 +32,6 @@ class XLNavigationDelegate: NSObject, UINavigationControllerDelegate {
     
     func panned(gestureRecognizer: UIPanGestureRecognizer) {
         
-        if (gestureRecognizer.velocityInView(self.navigationController.view).x <= 0) {
-            // 注释这端代码可以实现左右双向翻动
-            return
-        }
-        
         switch gestureRecognizer.state {
         case .Began:
             self.interactionController = UIPercentDrivenInteractiveTransition()
@@ -49,13 +44,17 @@ class XLNavigationDelegate: NSObject, UINavigationControllerDelegate {
         case .Changed:
             let translation = gestureRecognizer.translationInView(self.navigationController.view)
             let completionProgress = translation.x / CGRectGetWidth(self.navigationController.view.bounds)
-            if completionProgress > 0 {
-                self.interactionController?.updateInteractiveTransition(abs(completionProgress))
-
-            }
+            self.interactionController?.updateInteractiveTransition(abs(completionProgress))
             
         case .Ended:
-            self.interactionController?.finishInteractiveTransition()
+            let completionProgress = gestureRecognizer.translationInView(self.navigationController.view).x / CGRectGetWidth(self.navigationController.view.bounds)
+
+            if abs(completionProgress) > 0.1 {
+                self.interactionController?.finishInteractiveTransition()
+            } else {
+                self.interactionController?.cancelInteractiveTransition()
+            }
+
             self.interactionController = nil
             
         default:
