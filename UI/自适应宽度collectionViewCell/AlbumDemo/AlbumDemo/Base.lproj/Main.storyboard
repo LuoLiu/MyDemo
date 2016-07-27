@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y88-zx-4Fd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="IOP-OK-orT">
+            <objects>
+                <viewController id="y88-zx-4Fd" customClass="ViewController" customModule="AlbumDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hzC-8l-Ns7"/>
+                        <viewControllerLayoutGuide type="bottom" id="I4M-eF-hG7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EJI-54-F7g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Zx-xE-41b">
+                                <rect key="frame" x="0.0" y="20" width="600" height="400"/>
+                                <color key="backgroundColor" red="0.41176470590000003" green="0.76470588240000004" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="G4l-pK-eni"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="EC0-as-ye6" customClass="UICollectionViewLeftAlignedLayout" customModule="AlbumDemo" customModuleProvider="target">
+                                    <size key="itemSize" width="120" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vVN-wr-a2y">
+                                        <rect key="frame" x="10" y="10" width="120" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Zx-xE-41b" firstAttribute="top" secondItem="EJI-54-F7g" secondAttribute="top" constant="20" id="8am-xz-mHD"/>
+                            <constraint firstItem="2Zx-xE-41b" firstAttribute="leading" secondItem="EJI-54-F7g" secondAttribute="leading" id="Epy-3K-Syk"/>
+                            <constraint firstAttribute="trailing" secondItem="2Zx-xE-41b" secondAttribute="trailing" id="Oqt-Su-FcC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="2Zx-xE-41b" id="pHm-Ej-xh3"/>
+                        <outlet property="flowLayout" destination="EC0-as-ye6" id="Hk5-hP-kW5"/>
+                        <outlet property="verticalLayoutConstraint" destination="G4l-pK-eni" id="BEN-oQ-9lW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zm2-uD-Y8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325" y="519"/>
+        </scene>
+    </scenes>
+</document>
