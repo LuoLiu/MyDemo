@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="htu-3g-dr9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="436-BF-4sV">
+                                <rect key="frame" x="545" y="40" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="cNe-Lm-yYs"/>
+                                    <constraint firstAttribute="height" constant="35" id="k5m-fg-du0"/>
+                                </constraints>
+                                <state key="normal" title="Tap">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="a1k-zy-1JG" kind="show" identifier="PushSegue" id="mmd-xh-ZFF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33666431903839111" green="0.64199614524841309" blue="0.090475775301456451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="436-BF-4sV" secondAttribute="trailing" constant="20" id="1XC-nY-RWV"/>
+                            <constraint firstItem="436-BF-4sV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="tUh-2W-Khu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Px-dw-eSF"/>
+                    <connections>
+                        <outlet property="popBtn" destination="436-BF-4sV" id="oCd-0N-RZy"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="987" y="490"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="woU-ds-lWh">
+            <objects>
+                <viewController id="a1k-zy-1JG" customClass="ViewController" customModule="NavAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HaU-mo-eav"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Iq-ZM-k0U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bev-Xd-BbN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrO-8r-vGZ">
+                                <rect key="frame" x="545" y="40" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="63X-fQ-xr0"/>
+                                    <constraint firstAttribute="height" constant="35" id="WUR-qQ-M2K"/>
+                                </constraints>
+                                <state key="normal" title="Tap">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="popClick:" destination="a1k-zy-1JG" eventType="touchUpInside" id="zrf-bv-Xv4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QrO-8r-vGZ" secondAttribute="trailing" constant="20" id="481-eE-v2L"/>
+                            <constraint firstItem="QrO-8r-vGZ" firstAttribute="top" secondItem="HaU-mo-eav" secondAttribute="bottom" constant="20" id="gbb-cz-2dy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popBtn" destination="QrO-8r-vGZ" id="5NP-fB-ktp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gam-rP-ZwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="987" y="1162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fqh-cG-vOl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="htu-3g-dr9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JjK-H6-aa8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <outlet property="delegate" destination="KhH-x4-5vc" id="Kg8-zm-fEq"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YcP-GR-UtR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyj-kr-rrM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="KhH-x4-5vc" customClass="XLNavigationDelegate" customModule="NavAnimation" customModuleProvider="target">
+                    <connections>
+                        <outlet property="navigationController" destination="htu-3g-dr9" id="j6f-BZ-syG"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="288" y="490"/>
+        </scene>
+    </scenes>
+</document>
