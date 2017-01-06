@@ -10,6 +10,8 @@ import UIKit
 
 class AlertDetailCell: UITableViewCell {
 
+    static let identifier = "AlertDetailCell"
+    
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
     

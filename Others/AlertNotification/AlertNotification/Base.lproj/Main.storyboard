@@ -22,25 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvK-Mn-tT7">
-                                <rect key="frame" x="169" y="323" width="37" height="21"/>
+                                <rect key="frame" x="169" y="626" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smn-bR-edM">
-                                <rect key="frame" x="172" y="610" width="30" height="30"/>
-                                <state key="normal" title="Tap"/>
-                                <connections>
-                                    <action selector="popAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="43E-YS-F0X"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.38823529410000002" green="0.64313725489999995" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JvK-Mn-tT7" secondAttribute="bottom" constant="20" id="5BI-2o-8Tb"/>
                             <constraint firstItem="JvK-Mn-tT7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F9g-bl-4fb"/>
-                            <constraint firstItem="Smn-bR-edM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mdo-ID-tsL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Smn-bR-edM" secondAttribute="bottom" constant="27" id="PaB-D8-uPQ"/>
-                            <constraint firstItem="JvK-Mn-tT7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fM9-gS-2dl"/>
                         </constraints>
                     </view>
                 </viewController>

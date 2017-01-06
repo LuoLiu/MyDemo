@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 测试数据的Model
 struct TestModel {
     var image: UIImage = #imageLiteral(resourceName: "image1")
     var title: String = ""
@@ -37,9 +38,9 @@ class AlertTableViewController: UITableViewController {
         tableView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         tableView.showsVerticalScrollIndicator = false
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 37
+        tableView.estimatedRowHeight = 20
         
-        tableView.register(UINib.init(nibName: "AlertDetailCell", bundle: nil), forCellReuseIdentifier: "AlertDetailCell")
+        tableView.register(UINib.init(nibName: "AlertDetailCell", bundle: nil), forCellReuseIdentifier: AlertDetailCell.identifier)
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +59,7 @@ class AlertTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AlertDetailCell", for: indexPath) as! AlertDetailCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AlertDetailCell.identifier, for: indexPath) as! AlertDetailCell
 
         let data = dataList![indexPath.row]
         cell.configCell(iconImage: data.image, content: data.title)

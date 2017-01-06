@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        if let rootVC = window?.rootViewController {
+            if let alertView = Bundle.main.loadNibNamed("AlertNotificationView", owner: self, options: nil)?.first as? AlertNotificationView {
+                alertView.showAtContainerView(containerView: rootVC.view)
+            }
+        }
+        
         return true
     }
 
