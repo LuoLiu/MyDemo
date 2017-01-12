@@ -25,9 +25,23 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1l-sY-9FA">
                                     <rect key="frame" x="0.0" y="0.0" width="281.5" height="205"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNi-vI-GoN">
+                                            <rect key="frame" x="67.5" y="14.5" width="146.5" height="41"/>
+                                            <string key="text">My求人と一致した
+求人があります</string>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.16078431369999999" green="0.49803921569999998" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzS-xK-wg3">
                                             <rect key="frame" x="0.0" y="77" width="281.5" height="64"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1i-m0-lsq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="281.5" height="64"/>
+                                                    <connections>
+                                                        <action selector="cellOneTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="que-1I-oPq"/>
+                                                    </connections>
+                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="6VA-U8-x6C">
                                                     <rect key="frame" x="10" y="12" width="40" height="40"/>
                                                     <constraints>
@@ -74,6 +88,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="qIx-vW-Ize" firstAttribute="centerY" secondItem="EzS-xK-wg3" secondAttribute="centerY" id="75S-te-dSZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="R1i-m0-lsq" secondAttribute="bottom" id="Ckq-Wf-CAv"/>
                                                 <constraint firstAttribute="trailing" secondItem="yop-la-Tt7" secondAttribute="trailing" id="D7J-4D-iT4"/>
                                                 <constraint firstItem="yop-la-Tt7" firstAttribute="leading" secondItem="EzS-xK-wg3" secondAttribute="leading" id="Gn6-JN-Cal"/>
                                                 <constraint firstItem="qIx-vW-Ize" firstAttribute="leading" secondItem="6VA-U8-x6C" secondAttribute="trailing" constant="9" id="Mev-OP-FPu"/>
@@ -82,14 +97,24 @@
                                                 <constraint firstAttribute="height" constant="64" id="Wi0-Mj-sp5"/>
                                                 <constraint firstItem="6VA-U8-x6C" firstAttribute="leading" secondItem="EzS-xK-wg3" secondAttribute="leading" constant="10" id="Yrq-sB-Vhw"/>
                                                 <constraint firstAttribute="right" secondItem="kTC-kU-Ld2" secondAttribute="rightMargin" constant="12" id="ZxC-lF-YMd"/>
+                                                <constraint firstItem="R1i-m0-lsq" firstAttribute="top" secondItem="EzS-xK-wg3" secondAttribute="top" id="aXY-rY-nvr"/>
                                                 <constraint firstAttribute="bottom" secondItem="yop-la-Tt7" secondAttribute="bottom" id="gYd-ml-yo7"/>
                                                 <constraint firstItem="kTC-kU-Ld2" firstAttribute="centerY" secondItem="EzS-xK-wg3" secondAttribute="centerY" id="ioL-jt-SPC"/>
+                                                <constraint firstAttribute="trailing" secondItem="R1i-m0-lsq" secondAttribute="trailing" id="wne-Jw-D0l"/>
                                                 <constraint firstAttribute="trailing" secondItem="Wwy-wZ-wgZ" secondAttribute="trailing" constant="31" id="z99-qo-LDG"/>
+                                                <constraint firstItem="R1i-m0-lsq" firstAttribute="leading" secondItem="EzS-xK-wg3" secondAttribute="leading" id="zAp-hc-25o"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcu-EL-VUE">
                                             <rect key="frame" x="0.0" y="141" width="281.5" height="64"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNa-Hr-j9a">
+                                                    <rect key="frame" x="-0.5" y="-0.5" width="281.5" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="cellTwoTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="oS8-cV-u1C"/>
+                                                    </connections>
+                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="yPY-bw-sbO">
                                                     <rect key="frame" x="10" y="12" width="40" height="40"/>
                                                     <constraints>
@@ -149,14 +174,6 @@
                                                 <constraint firstItem="yPY-bw-sbO" firstAttribute="centerY" secondItem="jcu-EL-VUE" secondAttribute="centerY" id="lKB-WK-HH9"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNi-vI-GoN">
-                                            <rect key="frame" x="68" y="15" width="146.5" height="41"/>
-                                            <string key="text">My求人と一致した
-求人があります</string>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" red="0.16078431369999999" green="0.49803921569999998" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>

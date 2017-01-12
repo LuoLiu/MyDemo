@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  AlertNotification
+//  WeRead
 //
-//  Created by LuoLiu on 17/1/6.
+//  Created by LuoLiu on 17/1/10.
 //  Copyright © 2017年 LuoLiu. All rights reserved.
 //
 
@@ -15,13 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        // 程序启动时弹出
-        if let rootVC = window?.rootViewController {
-            if let alertView = Bundle.main.loadNibNamed("AlertNotificationView", owner: self, options: nil)?.first as? AlertNotificationView {
-                alertView.showAtContainerView(containerView: rootVC.view)
-            }
-        }
         
         return true
     }

@@ -13,6 +13,7 @@ class AlertNotificationView: UIView {
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var tableHeightConst: NSLayoutConstraint!
+    
     @IBOutlet weak var badgeLabelOne: UILabel!
     @IBOutlet weak var badgeLabelTwo: UILabel!
 
@@ -78,6 +79,14 @@ class AlertNotificationView: UIView {
             self.layoutIfNeeded()
             self.alertView.addSubview(tableView)
         }
+    }
+    
+    @IBAction func cellOneTapped(_ sender: Any) {
+        print("You click [新着のMy求人]")
+    }
+    
+    @IBAction func cellTwoTapped(_ sender: Any) {
+        print("You click [すべてのMy求人]")
     }
     
     @IBAction func okBtnTapped(_ sender: Any) {
