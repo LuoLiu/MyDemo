@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fhl-an-uR4">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CF-EV-nfW">
+                                <rect key="frame" x="295" y="232" width="178" height="30"/>
+                                <state key="normal" title="单个按钮_文字固定为&quot;OK&quot;"/>
+                                <connections>
+                                    <action selector="okAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tod-fL-0WM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siw-IU-8bD">
+                                <rect key="frame" x="312" y="311" width="145" height="30"/>
+                                <state key="normal" title="单个按钮_文字自定义"/>
+                                <connections>
+                                    <action selector="customSingleAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gu5-Lz-614"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9T-Wu-K7Z">
+                                <rect key="frame" x="257" y="384" width="254" height="30"/>
+                                <state key="normal" title="两个按钮_文字固定为&quot;OK&quot;，“Cancel”"/>
+                                <connections>
+                                    <action selector="defaultAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RTB-Aq-xiC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yov-p6-MQA">
+                                <rect key="frame" x="369" y="530" width="30" height="30"/>
+                                <state key="normal" title="Pop"/>
+                                <connections>
+                                    <action selector="popFromButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXj-il-Re1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="siw-IU-8bD" firstAttribute="top" secondItem="5CF-EV-nfW" secondAttribute="bottom" constant="49" id="Cvs-c3-aOY"/>
+                            <constraint firstItem="r9T-Wu-K7Z" firstAttribute="centerX" secondItem="siw-IU-8bD" secondAttribute="centerX" id="SCm-Zl-1OD"/>
+                            <constraint firstItem="Yov-p6-MQA" firstAttribute="centerX" secondItem="r9T-Wu-K7Z" secondAttribute="centerX" id="ZdM-a4-hl7"/>
+                            <constraint firstItem="siw-IU-8bD" firstAttribute="centerX" secondItem="5CF-EV-nfW" secondAttribute="centerX" id="g4Z-Hr-x8x"/>
+                            <constraint firstItem="5CF-EV-nfW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="168" id="hk4-Ph-FML"/>
+                            <constraint firstItem="r9T-Wu-K7Z" firstAttribute="top" secondItem="siw-IU-8bD" secondAttribute="bottom" constant="43" id="l01-o8-4mS"/>
+                            <constraint firstItem="5CF-EV-nfW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nb4-8I-gzo"/>
+                            <constraint firstItem="Yov-p6-MQA" firstAttribute="top" secondItem="r9T-Wu-K7Z" secondAttribute="bottom" constant="116" id="xve-dp-VIz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1GI-8d-lww">
+                        <barButtonItem key="rightBarButtonItem" title="Pop" id="Fn7-s3-d9u">
+                            <connections>
+                                <action selector="popFromBarItem:" destination="BYZ-38-t0r" id="58w-G8-ktL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620.5" y="76.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nOC-7Z-Wi7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fhl-an-uR4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IbB-CL-j9X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dNb-jl-ANb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hya-fh-MBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="76"/>
+        </scene>
+    </scenes>
+</document>
