@@ -16,15 +16,14 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+
     //    var qrCodeFrameView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-        
         do {
-            
             let input = try AVCaptureDeviceInput(device: captureDevice)
             captureSession = AVCaptureSession()
             captureSession?.addInput(input)
@@ -70,6 +69,26 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
         
         view.bringSubview(toFront: messageLabel)
         view.bringSubview(toFront: topbar)
+    }
+    
+    @IBAction func swapCamera(_ sender: Any) {
+        
+        if captureDevice?.position == .back {
+            if let videoDevices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) {
+                for device in videoDevices {
+                    if let device = device as? AVCaptureDevice {
+                        if device.position == .front {
+                            captureDevice = device
+                            break
+                        }
+                    }
+                }
+            }
+        } else {
+            captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        }
+        
+        self.viewDidLoad()
     }
     
     override func didReceiveMemoryWarning() {
