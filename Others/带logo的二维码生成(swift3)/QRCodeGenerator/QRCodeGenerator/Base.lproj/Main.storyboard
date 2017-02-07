@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCodeGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-N3-2xP">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="iO2-VE-RQ1"/>
+                                    <constraint firstAttribute="width" constant="200" id="qrj-cw-FgA"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oZ6-0L-ZSy">
+                                <rect key="frame" x="31" y="473" width="313" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hJ-pP-1UW">
+                                <rect key="frame" x="164" y="533" width="46" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="displayQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gcn-ds-etV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oZ6-0L-ZSy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="2zb-lT-Fzd"/>
+                            <constraint firstItem="oZ6-0L-ZSy" firstAttribute="top" secondItem="Yse-N3-2xP" secondAttribute="bottom" constant="39.5" id="4AR-1V-fy5"/>
+                            <constraint firstItem="1hJ-pP-1UW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L2K-vK-002"/>
+                            <constraint firstItem="Yse-N3-2xP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NhO-PH-8UL"/>
+                            <constraint firstItem="oZ6-0L-ZSy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vvr-f7-im3"/>
+                            <constraint firstItem="Yse-N3-2xP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mQl-UX-1AM"/>
+                            <constraint firstItem="1hJ-pP-1UW" firstAttribute="top" secondItem="oZ6-0L-ZSy" secondAttribute="bottom" constant="30" id="saG-Q3-2ct"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgQRCode" destination="Yse-N3-2xP" id="6bv-7Q-qlB"/>
+                        <outlet property="qrtext" destination="oZ6-0L-ZSy" id="PuD-PJ-Moy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+</document>
